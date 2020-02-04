@@ -1,0 +1,234 @@
+form {
+    width: 840px;
+    margin-bottom: 300px;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form>* {
+    margin: 20px;
+}
+
+input, select, textarea {
+    /*background-color: rgba(255, 255, 255, 0.3);*/
+    background-color: transparent;
+    /*border-radius: 20px;*/
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    height: 34px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+select {
+    background-color: transparent;
+    border: none;
+}
+
+#select_div {
+    /*background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;*/
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    outline: none;
+    height: 34px;
+    width: 100px;
+    color: white;
+    font-size: 17px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+option {
+    background-color: black;
+    color: white;
+}
+
+#select_direcor {
+    width: 150px;
+    border-bottom: 1 px solid white;
+}
+
+#textarea_id {
+    width: 800px;
+    height: 300px;
+    text-align: left;
+    padding: 25px;
+}
+
+.photo_input {
+    width: 800px;
+    z-index: 1;
+}
+
+#poster_photo_preview {
+    position: fixed;
+    top: 90000px;
+    left: 90000px;
+    width: auto;
+    height: auto;
+}
+
+.inpFile {
+    width: 800px;
+    height: 32px;
+    position: absolute;
+    opacity: 0;
+    z-index: 2;
+}
+
+#title_input {
+    width: 500px;
+}
+
+#year_input {
+    width: 191px;
+}
+
+form>div:nth-child(2) {
+    display: inline-flex;
+}
+
+form>div:nth-child(2):hover #add_d_pic {
+    transform: scale(1.2, 1.2);
+    cursor: pointer;
+}
+
+#add_d_pic {
+    width: 30px;
+    height: 30px;
+    margin-left: 80px;
+    transition: transform .8s;
+}
+
+#add_d {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 20;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+#add_d:hover{
+    cursor: pointer;
+}
+
+#set_div {
+    color: white;
+    text-align: center;
+}
+
+#set_div {
+    align-self: flex-start;
+}
+
+#button_div {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+#button_div_1 {
+    float: left;
+    height: 50px;
+    position: absolute;
+    display: flex;
+    transition: transform 0.5s;
+}
+
+#button_div_1:hover {
+    transform: scale(1.1, 1.1);
+    cursor: pointer;
+}
+
+#button_div_2:hover {
+    transform: scale(1.1, 1.1);
+}
+
+#button_div_1>img {
+    margin-top: 3px;
+    width: 40px;
+    height: 40px;
+}
+
+.button_request {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 25;
+}
+
+#button_div_2 {
+    float: right;
+    height: 50px;
+    display: flex;
+    transition: transform 0.5s;
+}
+
+#button_div_2>p {
+    transform: rotate(45deg);
+    display: inline-block;
+    margin: 0;
+    margin-top: -2px;
+    padding: 0;
+    color: red;
+    font-size: 50px;
+    background-color: transparent;
+    transition: transform 15s;
+    border: none;
+    outline: none;
+}
+
+#button_div_2:hover>p {
+    transform: rotate(900deg);
+    cursor: pointer;
+}
+
+#button_div_2>button {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 25;
+}
+
+#preview_button_div {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 200px;
+    height: 45px;
+    border-radius: 5px;
+    background-color: orange;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .3s;
+}
+
+#preview_button {
+    color: black;
+    background-color: transparent;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+}
+
+#preview_icon {
+    width: 40px;
+    height: 40px;
+}
+
+#preview_button_div:hover {
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+}

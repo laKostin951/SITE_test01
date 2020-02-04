@@ -1,0 +1,234 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="CSS\site_main.css">
+    <link rel="stylesheet" type="text/css" href="CSS\site_movie_conteiner.css">
+    <title>movies</title>
+
+</head>
+
+<body>
+
+    <!--log in page-->
+    <div class="log hide">
+        <button onclick="close_logIn_window()">+</button>
+        <center>
+
+            <form id="log_fieldset">
+                <p>Log In</p>
+                <div class="Log_in_username">
+                    <span class="span_down">Username</span>
+                    <input type="text" class="log_in_input" required autocomplete="off">
+                </div>
+                <div class="Log_in_username">
+                    <span class="span_down">Password</span>
+                    <input type="text" class="log_in_input" required autocomplete="off">
+                </div>
+                <button type="submit" class="log_in_button">Log In</button>
+
+                <p class="clasa">Don't have Account yet? <a onclick="open_RegIn_window()" id="a_her_link">Register</a> </p>
+            </form>
+
+        </center>
+        <center>
+            <fieldset id="register_fieldset">
+                <p>Register</p>
+                <div class="regiter_div">
+                    <p class="label">
+                        Name:
+                    </p>
+                    <input placeholder="Your First Name" type="text" class="register_in_input" required autocomplete="off">
+                </div>
+                <div class="regiter_div">
+                    <p class="label">
+                        Surname:
+                    </p>
+                    <input placeholder="Your Last Name" type="text" class="register_in_input" required autocomplete="off">
+                </div>
+                <div class="regiter_div">
+                    <p class="label">
+                        Username:
+                    </p>
+                    <input placeholder="Your Username" type="text" class="register_in_input" required autocomplete="off">
+                </div>
+                <div class="regiter_div">
+                    <p class="label">
+                        Password:
+                    </p>
+                    <input placeholder="Password" type="password" class="register_in_input" required autocomplete="off">
+                </div>
+                <div class="regiter_div">
+                    <p class="label">
+                        Password:
+                    </p>
+                    <input placeholder="Password Again" type="password" class="register_in_input" required autocomplete="off">
+                </div>
+                <div class="regiter_div">
+                    <p class="label">
+                        Admin:
+                    </p>
+                    <img src="FILES\x-mark.png" id="set_admin_check" onclick="set_Admin_Batman(this)" />
+                </div>
+                <button type="submit" class="register_in_button" onclick="register_in_button()">Register</button>
+
+            </fieldset>
+        </center>
+    </div>
+    <!--bag preview-->
+    <div id="bag_wrraper" class="hide">
+    </div>
+    <div id="shopping_bag_container">
+        <div id="div_1">
+            <button id="div1_button" onclick="hide_shopping_bag()">+</button>
+            <p>
+                Your Shopping Bag
+            </p>
+        </div>
+        <div id="div_2">
+        </div>
+        <div id="div_3">
+
+            <img src="FILES\iconmonstr-gear-2-48.png" />
+            <p>
+                view details
+            </p>
+
+        </div>
+    </div>
+
+
+    <!--img slider-->
+    <div class="slide-container">
+        <div class="img-container">
+
+        </div>
+        <div class="black_cover"></div>
+    </div>
+    <h1 onclick="show_movie()" id="movie_slider_title"></h1>
+    <button class="img-slider-button" id='5'>Buy</button>
+    <!--nav bar-->
+    <div id="nav-bar">
+        <div id="nav-bar-1">
+            <div id="div1_animation" class="gif"></div>
+            <div id="div2_animation" class="gif"></div>
+            <h2 onclick="main_page_load()">movies.com</h2>
+        </div>
+        <div id="nav-bar-2">
+            <input type="text" placeholder="Search" class="search">
+            <div id="continer_for_prediction">
+            </div>
+        </div>
+        <div id="nav-bar-3">
+            <button class="btn logbtn" onclick="open_logIn_window()">Log In</button>
+            <div>
+                <button class="btn register" onclick="open_RegIn_window_button()">Register</button>
+            </div>
+        </div>
+        <!--Drop menu-->
+        <div class="drop_menu_container">
+            <p class="square"></p>
+            <ul id="ProfilePart">
+                <p>PROFILE</p>
+
+                <li onclick="load_MyProfile()"> Profile</li>
+                <li onclick="load_MyPurchase()">Purchase</li>
+                <li onclick="load_MyBag()">
+                    Shopping Bag
+                </li>
+                <li onclick="load_MyProfile()">Settings</li>
+                <li onclick="logOutBatman()">Log Out</li>
+            </ul>
+            <ul id='GENRES'>
+                <p>GENRES</p>
+            </ul>
+            <ul id='DIRECTOR'>
+                <p>DIRECTOR</p>
+
+
+            </ul>
+            <ul id="YEAR">
+                <p>YEAR</p>
+            </ul>
+
+            <ul id="adminPart">
+                <p>Add</p>
+
+                <li onclick="loadAddMovie_Page(0)">Movie</li>
+                <li onclick="loadAddMovie_Page(1)">Director</li>
+                <li onclick="open_RegIn_window_button()">Admin</li>
+            </ul>
+            <div id="rateing">
+                <p>
+                    Rate US
+                </p>
+                <span id="1" onclick="rate_site(this.id)">🙁</span>
+                <span id="2" onclick="rate_site(this.id)">😐</span>
+                <span id="3" onclick="rate_site(this.id)">😄</span>
+                <span id="4" onclick="rate_site(this.id)">😁</span>
+                <span id="5" onclick="rate_site(this.id)">😍</span>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <!--movies-->
+    <div class="movie_container">
+    </div>
+    <!--movie prviw page-->
+    <div id="preview_page">
+        <div class="preview_fraction_img">
+
+            <img src="FILES\COVER\2cb0b40827c1d8b53df0d68013674709.jpg" id="preview_img" />
+        </div>
+        <div class="wrraper1">
+
+
+            <div class="preview_fraction_drescrition">
+                <button id="preview_close_button">+</button>
+                <p>
+                    Lion King
+                </p>
+                <p>
+                    In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: the
+                    Joker.
+                </p>
+            </div>
+            <div class="preview_fraction_info">
+                <p>genre:
+                </p>
+                <p>year:
+                </p>
+                <p>director:
+                </p>
+                <p>price:
+                </p>
+
+            </div>
+            <div class="preview_fraction_buy">
+                <div id="trash_can_container" onclick="delite_this_movie()">
+                    <img src="FILES\iconmonstr-trash-can-part_1.png" id="trash_can1" />
+                    <img src="FILES\iconmonstr-trash-can-part-2.png" id="trash_can2" />
+                </div>
+
+                <button class="final_buy_button">Buy</button>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+<script src="JAVASCRIPT\site_main.js"></script>
+<script src="JAVASCRIPT\register_user.js"></script>
+<script src="JAVASCRIPT\site_load_movies.js"></script>
+<script src="JAVASCRIPT\prediction.js"></script>
+<script src="JAVASCRIPT\users.js"></script>
+<script src="JAVASCRIPT\buy_buttin.js"></script>
+<script src="JAVASCRIPT\drop_menu.js"></script>
+
+
+
+</html>

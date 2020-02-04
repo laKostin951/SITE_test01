@@ -1,0 +1,328 @@
+/* img slider */
+.slide-container {
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -1;
+}
+
+.img-container {
+    height: 90vh;
+    overflow: visible;
+    position: relative;
+    transition-duration: 2s;
+    -webkit-transition-duration: 2s;
+}
+
+.slider-img {
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    height: 90vh;
+}
+
+h1 {
+    display: inline-block;
+    z-index: 1;
+    position: relative;
+    top: 50vh;
+    left: 100px;
+    color: white;
+    font-size: 50px;
+    background-color: transparent;
+    opacity: 0.0;
+    -webkit-transition: opacity 1.5s ease-in, color .3s;
+    -moz-transition: opacity 1.5s ease-in, color .3s;
+    transition: opacity 1.5s ease-in, color .3s;
+}
+
+h1:hover {
+    color: red;
+}
+
+.img-slider-button {
+    z-index: 0;
+    top: 65vh;
+    margin-left: 44.8vw;
+    margin-right: 46vw;
+    border: 0px;
+    position: relative;
+    width: 140px;
+    height: 50px;
+    background-color: red;
+    color: white;
+    opacity: 0;
+    -webkit-transition: opacity 1.5s ease;
+    -moz-transition: opacity 1.5s ease;
+    transition: opacity 1.5s ease;
+    font-size: 30px;
+    border-radius: 25px;
+}
+
+.img-slider-button:hover {}
+
+.black_cover {
+    width: 100%;
+    height: 35vh;
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), 60%, rgb(0, 0, 0, 0));
+}
+
+legend {
+    color: white;
+    font-size: 18px;
+    margin: 40px;
+    padding-left: 70px;
+}
+
+/* movies page */
+.movie_container {
+    height: 1000px;
+    margin-top: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+}
+
+.movie_img_container {
+    width: 240px;
+    height: 340px;
+    margin: 5px;
+    position: relative;
+    display: inline-block;
+    transform: scale(1, 1);
+    transition: transform .265s ease-out;
+}
+
+.movie_img_container>img {
+    width: 240px;
+    height: 340px;
+    position: absolute;
+    z-index: 0;
+}
+
+/*.cont {
+    padding-left: 30px;
+}
+
+div.cont>div>div {
+    height: 250px;
+    overflow: hidden;
+    padding-bottom: 12px;
+}
+
+div.cont>div {
+    float: left;
+    margin: 15px;
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+    overflow: hidden;
+}
+
+div.cont>div>div>img {
+    width: 200px;
+    height: 260px;
+}
+
+div.cont>div>div>img:hover {
+    transition: transform .5s ease-in-out;
+    -ms-transform: scale(1.4);
+    /* IE 9 */
+    /*-webkit-transform: scale(1.4);
+    /* Safari 3-8 */
+    /*transform: scale(1.4);
+}
+
+div.cont>div>div:nth-child(2)>p:nth-child(2) {
+    float: right;
+}
+
+div.cont>div>div:nth-child(2) {
+    display: inline;
+}*/
+
+/*moivie preview page*/
+#preview_page {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 100%;
+    left: 2vw;
+    width: 96%;
+    bottom: 0;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 50px 27px 40px rgba(0, 0, 0, 0.65);
+    background-color: black;
+    z-index: 2;
+    transition: top .9s ease-out;
+    display: inline-flex;
+}
+
+.preview_fraction_img {
+    display: inline-block;
+    float: left;
+}
+
+#preview_img {
+    margin-left: 50px;
+    margin-top: 50px;
+    width: 430px;
+    height: 550px;
+}
+
+.wrraper1 {
+    display: inline;
+    float: right;
+}
+
+.preview_fraction_drescrition {
+    display: block;
+}
+
+.preview_fraction_drescrition>button {
+    float: right;
+    margin: 20px;
+    margin-top: 0;
+    border: none;
+    transform: rotate(45deg);
+    color: red;
+    font-size: 40px;
+    background-color: transparent;
+    transition: transform 1s;
+}
+
+.preview_fraction_drescrition>p:nth-child(2) {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+.preview_fraction_drescrition>p:nth-child(3) {
+    text-align: left;
+    color: white;
+    font-size: 20px;
+    margin: 50px;
+    margin-top: 100px;
+}
+
+.preview_fraction_info {
+    display: block;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+.preview_fraction_info>p {
+    color: white;
+}
+
+.preview_fraction_buy {
+    float: right;
+    margin-top: 0px;
+}
+#trash_can_container{
+    height: 40px;
+    float: right;
+    display: none;
+    align-items: flex-start;
+    position: relative;
+    justify-content: center;
+    transition: transform .4s;
+    margin-right: 50px;
+    margin-top: 38px;
+
+}
+#trash_can1 {
+    position: absolute;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+}
+
+#trash_can2 {
+    position: absolute;
+    z-index: 1;
+margin-left: 3px;
+
+    width: 36px;
+    height: 40px;
+    transition: transform .4s,bottom .6s,right .2s;
+
+
+}
+#trash_can_container:hover { transform: scale(1.2,1.2);
+cursor: pointer;}
+
+#trash_can_container:hover #trash_can2{ transform: rotate(60deg);
+bottom: 10px;
+right: -16px;}
+
+.price {
+    color: red;
+    margin-top: 40px;
+    float: right;
+}
+
+.final_buy_button {
+    width: 140px;
+    height: 50px;
+    background-color: red;
+    color: white;
+    font-size: 30px;
+    border-radius: 25px;
+    border: none;
+    float: right;
+    margin: 30px;
+    margin-right: 90px;
+}
+
+/* title i buy button */
+.layer {
+    position: absolute;
+    display: inline-block;
+    z-index: 1;
+    width: 240px;
+    height: 340px;
+    opacity: 0;
+}
+
+div.layer>div {
+    position: relative;
+    width: 240px;
+    height: 340px;
+}
+
+div.layer>div>p {
+    float: left;
+    position: absolute;
+    bottom: 0;
+    font-size: 26px;
+    padding: 0px;
+    margin: 10px;
+}
+
+.layer:hover {
+    opacity: 1;
+    webkit-transition: opacity .9s ease;
+    -moz-transition: opacity .9s ease;
+    transition: opacity .9s ease;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), 70%, rgb(0, 0, 0, 0.2));
+    color: white;
+}
+
+div.layer>div>button {
+    position: absolute;
+    bottom: 150;
+    left: 80;
+    border: 0px;
+    width: 80px;
+    height: 35px;
+    background-color: red;
+    color: white;
+    font-size: 22px;
+    border-radius: 21px;
+}

@@ -1,0 +1,203 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="CSS\site_main.css">
+    <link rel="stylesheet" type="text/css" href="CSS\adminChange.css">
+    <title>Change Movie</title>
+</head>
+
+<body>
+    <!--log in page-->
+    <!--bag preview-->
+    <div id="bag_wrraper" class="hide">
+    </div>
+    <div id="shopping_bag_container">
+        <div id="div_1">
+            <button id="div1_button" onclick="hide_shopping_bag()">+</button>
+            <p>
+                Your Shopping Bag
+            </p>
+        </div>
+        <div id="div_2">
+        </div>
+        <div id="div_3">
+
+            <img src="FILES\iconmonstr-gear-2-48.png" />
+            <p>
+                view details
+            </p>
+
+        </div>
+    </div>
+
+    <!--nav bar-->
+    <div id="nav-bar">
+        <div id="nav-bar-1">
+            <div id="div1_animation" class="gif"></div>
+            <div id="div2_animation" class="gif"></div>
+            <h2 onclick="main_page_load()">movies.com</h2>
+        </div>
+        <div id="nav-bar-2">
+            <input type="text" placeholder="Search" class="search">
+            <div id="continer_for_prediction">
+            </div>
+        </div>
+        <div id="nav-bar-3">
+            <button class="btn logbtn" onclick="open_logIn_window()">Log In</button>
+            <div>
+                <button class="btn register" onclick="open_RegIn_window_button()">Register</button>
+            </div>
+        </div>
+        <div class="drop_menu_container">
+            <p class="square"></p>
+            <ul id="ProfilePart">
+                <p>PROFILE</p>
+
+                <li onclick="load_MyProfile()"> Profile</li>
+                <li onclick="load_MyPurchase()">Purchase</li>
+                <li onclick="load_MyBag()">
+                    Shopping Bag
+                </li>
+                <li onclick="load_MyProfile()">Settings</li>
+                <li onclick="logOutBatman()">Log Out</li>
+            </ul>
+            <ul id='GENRES'>
+                <p>GENRES</p>
+            </ul>
+            <ul id='DIRECTOR'>
+                <p>DIRECTOR</p>
+
+
+            </ul>
+            <ul id="YEAR">
+                <p>YEAR</p>
+            </ul>
+
+            <ul id="adminPart">
+                <p>Add</p>
+
+                <li onclick="loadAddMovie_Page(0)">Movie</li>
+                <li onclick="loadAddMovie_Page(1)">Director</li>
+                <li onclick="open_RegIn_window_button()">Admin</li>
+            </ul>
+            <div id="rateing">
+                <p>
+                    Rate US
+                </p>
+                <span id="1" onclick="rate_site(this.id)">🙁</span>
+                <span id="2" onclick="rate_site(this.id)">😐</span>
+                <span id="3" onclick="rate_site(this.id)">😄</span>
+                <span id="4" onclick="rate_site(this.id)">😁</span>
+                <span id="5" onclick="rate_site(this.id)">😍</span>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <!--input form-->
+    <form id="myForm">
+        <div>
+            <input placeholder="Title" id="title_input" type="text" required autocomplete="off" />
+            <input placeholder="Year" id="year_input" type="number" required min="1900" max="2020" autocomplete="off" />
+            <div id="select_div">
+                <select required id="select_genre">
+                    <option value="" selected disabled hidden>Genre</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Crime">Crime</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Action">Action</option>
+                    <option value="Thriller">Thriller</option>
+                    <option value="Horror">Horror</option>
+                </select>
+            </div>
+
+        </div>
+        <div>
+
+            <select required id="select_direcor">
+                <option value="" selected disabled hidden>Director</option>
+            </select>
+
+            <img src="FILES\iconmonstr-user-10-32.png" id="add_d_pic" />
+            <div id="add_d">Add director</div>
+
+        </div>
+
+        <textarea placeholder=" Movie Description
+
+        Exaple:
+
+        In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and
+        mistreated by society. He then embarks on a downward spiral of revolution and
+        bloody crime. This path brings him face-to-face with his alter-ego: the
+        Joker.
+
+
+        " id="textarea_id"></textarea>
+        <div>
+            <input type="file" class="inpFile" />
+            <input placeholder="Cover Photo" id="cover_photo" class="photo_input" required />
+        </div>
+        <div>
+            <input type="file" class="inpFile" />
+            <input placeholder="Poster Photo" id="poster_photo" class="photo_input" />
+        </div>
+        <div id="set_div">
+            <input placeholder="Price" id="price_input" type="number" required autocomplete="off" step="any" />
+            <input placeholder="Quantity" id="q_input" type="number" required autocomplete="off" />
+        </div>
+        <div id="button_div">
+            <div id="button_div_1">
+                <img src="FILES\iconmonstr-help-3-32.png" />
+                <button class='button_request' id="0">Request</button>
+            </div>
+            <div id="button_div_2">
+                <p>
+                    +
+                </p>
+                <button id="cancel_button">Cancel</button>
+            </div>
+        </div>
+
+    </form>
+
+    <!-- add director-->
+    <div class="log hide">
+        <button onclick="close_addD_window()">+</button>
+        <center>
+            <fieldset id="log_fieldset">
+                <p>Add Director</p>
+                <div class="Log_in_username">
+                    <span class="span_down">Director Name</span>
+                    <input type="text" class="log_in_input" required>
+                </div>
+                <div class="Log_in_username">
+                    <span class="span_down">Director Surname</span>
+                    <input type="text" class="log_in_input" required>
+                </div>
+                <button type="submit" class="log_in_button" onclick="add_directorBatman(this)">Add Director</button>
+
+            </fieldset>
+        </center>
+    </div>
+    <img src="" id="poster_photo_preview" />
+    <div id="preview_button_div">
+        <img src="FILES\iconmonstr-eye-6-32 (1).png" id="preview_icon" />
+        <button id="preview_button">Preview</button>
+    </div>
+
+
+</body>
+
+<script src="JAVASCRIPT\site_main.js"></script>
+<script src="JAVASCRIPT\prediction.js"></script>
+<script src="JAVASCRIPT\users.js"></script>
+<script src="JAVASCRIPT\adminChange.js"></script>
+<script src="JAVASCRIPT\drop_menu.js"></script>
+
+
+</html>

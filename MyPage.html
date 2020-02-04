@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="CSS\site_main.css">
+    <link rel="stylesheet" type="text/css" href="CSS\MyProfile.css">
+    <title>MyPage</title>
+
+</head>
+
+<body id="Add_body">
+    <div id="div_1_profile">
+        <img src="FILES\iconmonstr-angel-left-circle-thin-48.png" id="back_icon" onclick="open_indeX()" />
+        <img src="FILES\iconmonstr-gear-thin-48.png" id="icon_settings" onclick="open_settingsProfile()" id="cover_for_changes" />
+
+        <div id="cover_for_changes">
+
+        </div>
+        <form id="form_change">
+            <div class="div_input_container">
+                <label>Name:</label>
+                <input type="text" id="nameUser" required />
+            </div>
+            <div class="div_input_container">
+                <label>Surname:</label>
+                <input type="text" id="surmaneUser" required />
+            </div>
+            <div class="div_input_container">
+                <label>UserName:</label>
+                <input type="text" id="userNameUser" readonly />
+            </div>
+            <div class="div_input_container">
+                <label>Old Password:</label>
+                <input type="password" id="oldPasswordUser" required />
+            </div>
+            <div class="div_input_container">
+                <label>New Password:</label>
+                <input type="password" id="newPasswordUser" />
+            </div>
+            <div class="div_input_container">
+                <label>New Password:</label>
+                <input type="password" id="newPasswordUserAgain" />
+            </div>
+            <div id="saveDiv" class="buttonDiv">
+                <img src="FILES\iconmonstr-check-mark-circle-thin-48.png" id="mark_icon" />
+                Save
+            </div>
+            <div id="cancelDiv" class="buttonDiv">
+                <img src="FILES\iconmonstr-x-mark-circle-thin-48.png" id="decline_icon" />
+                Cancel
+            </div>
+
+        </form>
+
+    </div>
+    <div id="div_2_purcuases">
+        <button id="button_bag" class="button_left">My Bag</button>
+        <button id="button_purchuases" class="button_left">Purchase</button>
+        <img src="FILES\iconmonstr-coin-2-32.png" class="total icon" <p class="total price">
+        <p class="total price">
+        </p>
+        <button id="Check_Out" class="button_left" onclick="check_outBatman()">Check Out</button>
+        <div id="shoping_bag_div" class="div_3_shop">
+            <h1>My Bag</h1>
+        </div>
+
+        <div id="last_purchuase_div" class="div_3_shop">
+
+        </div>
+    </div>
+</body>
+<script src="JAVASCRIPT\MyProfile.js"></script>
+<script src="JAVASCRIPT\last_purchase.js"></script>
+
+</html>

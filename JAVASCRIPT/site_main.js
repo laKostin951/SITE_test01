@@ -6,48 +6,6 @@ var currentPurchase = JSON.parse(localStorage.current_purchuase)
 var mainNavBar = document.getElementById("nav-bar")
 continer_for_prediction = document.getElementById("continer_for_prediction")
 
-localStorage.setItem("poster_movies", JSON.stringify([{
-        "poster": "FILES/POSTER/the-lion-king-2019-movie.jpg",
-        "title": "Lion King",
-        "id": 5
-    }, {
-        "poster": "FILES/POSTER/avengers-logo-purple-minimal.png",
-        "title": "Avengers Endgame",
-        "id": 6
-    }, {
-        "poster": "FILES/POSTER/dora-and-the-lost-city-of-gold-2019-movie.jpg",
-        "title": "Dora and the Lost City of Gold",
-        "id": 7
-    }, {
-        "poster": "FILES/POSTER/fast-furious-presents-hobbs-shaw-dwayne-johnson-jason.jpg",
-        "title": "Fast & Furious Present: Hobbs & Shaw",
-        "id": 8
-    }, {
-        "poster": "FILES/POSTER/joker-2019-movie.jpg",
-        "title": "Joker",
-        "id": 9
-    }, {
-        "poster": "FILES/POSTER/jumanji-the-next-level-kevin-hart-dwayne-johnson.jpg",
-        "title": "Jumanji:The Next Level",
-        "id": 10
-    }, {
-        "poster": "FILES/POSTER/movie-poster-of-john-wick-3.jpg",
-        "title": "John Wick: Chapter 3 - Parabellum",
-        "id": 11
-    }, {
-        "poster": "FILES/POSTER/movie-the-dark-knight-rises.jpg",
-        "title": "The Dark Knight Rises",
-        "id": 12
-    }, {
-        "poster": "FILES/POSTER/red-balloons-it-chapter-2-movie.jpg",
-        "title": "It Chapter Two",
-        "id": 13
-    }]
-
-
-));
-
-
 /* nav bar STICKY ANIMACIJA */
 
 window.onmousemove = function() /* supustanje nav bar na poziciju misa*/ {

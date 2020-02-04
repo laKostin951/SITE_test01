@@ -448,3 +448,31 @@ localStorage.setItem("Global_purchuase", JSON.stringify([
     ]
 
 ));
+
+localStorage.setItem("Action_for_change_movie", JSON.stringify({
+        "action": false
+    }
+
+));
+
+localStorage.setItem("current_purchuase", JSON.stringify([]
+
+));
+
+localStorage.setItem("Action_for_MyPage", JSON.stringify({
+        "action": false,
+        "type": 2
+    }
+
+));
+localStorage.setItem("Current_user", JSON.stringify(
+
+));
+localStorage.setItem("Action_for_load_movie", JSON.stringify({
+        "action": false
+    }
+
+));
+
+sessionStorage.setItem('gif_count', 0)
+sessionStorage.setItem('admin_count', 0)
